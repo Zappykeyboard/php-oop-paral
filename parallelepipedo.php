@@ -38,23 +38,25 @@
     }
   }
 
-  $myParallelepipedi = [
+/*   $myParallelepipedi = [
     new Parallelepipedo(3, 4, 5),
     new Parallelepipedo(8, 9, 10),
     new Parallelepipedo(11, 12, 15)
   ];
-
+  
+  $message = "";
   foreach ($myParallelepipedi as $myParallelepipedo) {
     $myArea = $myParallelepipedo -> getArea();
     $myVolume = $myParallelepipedo -> getVolume();
 
-    echo "Dimensioni parallelepipedo: ".
+    $message .= "Dimensioni parallelepipedo: ".
       $myParallelepipedo -> base .", ".
       $myParallelepipedo -> altezza . ", " .
       $myParallelepipedo -> profondita ." </br>";
-    echo "Area: " . $myArea . "</br>";
-    echo "Volume: " . $myVolume . "</br>";
-  }
+    $message .= "Area: " . $myArea . "</br>";
+    $message .= "Volume: " . $myVolume . "</br>";
+  } */
+  
   
 
 ?>
