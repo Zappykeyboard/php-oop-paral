@@ -14,6 +14,7 @@
     <!-- TEMPLATE-->
     <script id="item-template" type="text/x-handlebars-template">
     <div class= 'data-cont'>
+      <h4>Parallelepipedo {{number}}</h4>
       <p class='line-1'>{{riassunto}}</p>
       <p class='line-2'>{{area}}</p>
       <p class='line-3'>{{volume}}</p>
@@ -27,8 +28,42 @@
     <title>Parallelepipedo</title>
   </head>
   <body>
-  <div class="container">
+    
+    <div class="container">
+    <h1>Calcola area e volume di 3 parallelepipedi</h1>
+
+    <div class="forms">
+      <div class='form'>
+        <h2>Inserisci dati prima figura: </h2>
+        <span>Altezza: <input type="text"  id="altezza1" value=2></span>
+        <span>Base: <input type="text" id='base1' value=3></span>
+        <span>Profondità: <input type="text" id="prof1" value=4></span>
+      </div>
+
+      <div class='form'>
+      <h2>Inserisci dati seconda figura: </h2>
+      <span>Altezza: <input type="text"  id="altezza2" value=5></span>
+        <span>Base: <input type="text" id='base2' value=6></span>
+        <span>Profondità: <input type="text" id="prof2" value=7></span>
+      </div>
+
+      <div class='form'>
+      <h2>Inserisci dati terza figura: </h2>
+      <span>Altezza: <input type="text"  id="altezza3" value=8></span>
+        <span>Base: <input type="text" id='base3' value=9></span>
+        <span>Profondità: <input type="text" id="prof3" value=10></span>
+      </div>
+    </div>
+
+      <button id='send'>INVIA</button>
+
+
+      <div id='risposte'>
+        <h2>RISPOSTE:</h2>
+
+      </div>
+    </div>
+
  
-  </div>
   </body>
 </html>
