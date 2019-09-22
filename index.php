@@ -14,7 +14,7 @@
     <!-- TEMPLATE-->
     <script id="item-template" type="text/x-handlebars-template">
     <div class= 'data-cont'>
-      <h4>Parallelepipedo {{number}}</h4>
+      <h4>Parallelepipedo N° {{number}}</h4>
       <p class='line-1'>{{riassunto}}</p>
       <p class='line-2'>{{area}}</p>
       <p class='line-3'>{{volume}}</p>
