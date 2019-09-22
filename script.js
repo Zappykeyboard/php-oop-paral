@@ -1,6 +1,6 @@
 function init() {
   console.log("Hello World");
-  $(document).on('click', '#send', collectData);
+  $(document).on('click', '#send', getResponse);
   
 }
 
@@ -28,12 +28,15 @@ function collectData(){
   });
 
   console.log(arr);
+  
 
-  getResponse(arr);
+  return arr;
 
 }
 
-function getResponse(arr){
+function getResponse(){
+
+  var arr = collectData();
 
   var theData = {
      paral1: arr[0],
@@ -47,11 +50,37 @@ function getResponse(arr){
     data: theData,
     success: function(data){
       console.log(data);
-      
+      printData(arr, data);
     },
     error: function(err){
       console.log(err);
     }
 
   })
+}
+
+function printData(arr, data){
+
+  var source = $('#item-template').html();
+  var template = Handlebars.compile(source);
+
+  for (var i = 0; i<arr.length;i++){
+    var index = arr[i];
+    var context = {
+      number: i+1,
+      riassunto: 'Altezza: ' + index[0] +
+      ', Base: ' + index[1] +
+      ', Profondità: ' + index[2] ,
+      area: 'Area: ' + data.areas[i] ,
+      volume: 'Volume: ' + data.volumes[i]
+    }
+
+    var html = template(context);
+
+    $('#risposte').append(html);
+  }
+
+  
+
+ 
 }
