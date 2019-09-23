@@ -80,7 +80,19 @@ function printData(arr, data){
     $('#risposte').append(html);
   }
 
-  
+  var areaSum = data.areas.reduce(function(acc, curr, i ){
+    return acc + curr;
+  });
+
+  $('#risposte').append('Somma delle aree: ' + areaSum + '</br>');
+
+  var sumVolumes = data.volumes.reduce(function(acc, curr, i ){
+    return acc + curr;
+  });
+
+  $('#risposte').append('Somma dei volumi: ' + sumVolumes);
+
+
 
  
 }
